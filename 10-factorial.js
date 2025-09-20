@@ -1,14 +1,11 @@
-function factorial (args){
-   let result = 1
-    if(args >0){
-        return undefined
-    }
-    else if (args===NaN){
-        return result
-    }
 
-    for (let i=0;1>arg;1++){
-        args=args[i]
-    }
-
+function factorial(n) {
+  if (Number.isNaN(n) || n <= 0) {
+    return 1;
+  }
+  return n * factorial(n - 1);
 }
+
+const n = parseInt(process.argv[2], 10);
+console.log(factorial(n));
+
